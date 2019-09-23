@@ -4,36 +4,45 @@ var renderer = PIXI.autoDetectRenderer(400,400,{backgroundColor: 0x000000});
 gameport.appendChild(renderer.view);
 
 
+
 var stage = new PIXI.Container();
-var texture = PIXI.Texture.fromImage("slime_sprite.png");
 
-var sprite = new PIXI.Sprite(texture);
+var slime = new PIXI.Sprite(PIXI.Texture.fromImage("slime_sprite.png"));
+var sun = new PIXI.Sprite(PIXI.Texture.fromImage("sun_sprite.png"));
 
-sprite.anchor.x = 0.5;
-sprite.anchor.y = 0.5;
 
-sprite.position.x = 200;
-sprite.position.y = 200;
 
-stage.addChild(sprite);
+slime.anchor.x = 0.5;
+slime.anchor.y = 0.5;
+slime.position.x = 200;
+slime.position.y = 200;
+
+sun.anchor.x = 0.6;
+sun.anchor.y = 0.6;
+sun.position.x = 220;
+sun.position.y = 220;
+
+stage.addChild(slime);
+stage.addChild(sun);
+
 
 function keydownEventHandler(e){
 
    if(e.keyCode == 87) //w key
    {
-      sprite.position.y -=10;
+      slime.position.y -=10;
    }
    if(e.keyCode == 83) //s key
    {
-      sprite.position.y +=10;
+      slime.position.y +=10;
    }
    if(e.keyCode == 65) //w key
    {
-      sprite.position.x -=10;
+      slime.position.x -=10;
    }
    if(e.keyCode == 68) //w key
    {
-      sprite.position.x +=10;
+      slime.position.x +=10;
    }
 }
 
