@@ -27,7 +27,7 @@ stage.addChild(sun);
 
 
 function keydownEventHandler(e){
-
+   //slime
    if(e.keyCode == 87) //w key
    {
       slime.position.y -=10;
@@ -36,13 +36,31 @@ function keydownEventHandler(e){
    {
       slime.position.y +=10;
    }
-   if(e.keyCode == 65) //w key
+   if(e.keyCode == 65) //a key
    {
       slime.position.x -=10;
    }
-   if(e.keyCode == 68) //w key
+   if(e.keyCode == 68) //d key
    {
       slime.position.x +=10;
+   }
+   //Sun
+
+   if(e.keyCode == 37) // left arrow key
+   {
+      sun.position.x -=10; 
+   }
+   if(e.keyCode == 39) // right arrow key
+   {
+      sun.position.x +=10;
+   }
+   if(e.keyCode == 40) // down arrow key
+   {
+      sun.position.y +=10;
+   }
+   if(e.keyCode == 38) // up arrow key
+   {
+      sun.position.y -=10;
    }
 }
 
